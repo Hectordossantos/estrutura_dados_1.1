@@ -18,12 +18,13 @@ int i;
     for ( i = 0; i < quantidade; i++)
     {
 
-    printf("digite o nome %d do aluno", i+1);
+    printf("digite o nome %d do aluno\n", i+1);
     scanf(" %[^\n]s", &alunos[i].nome);
-    printf("digite a faltas %d do aluno", i+1);
+    printf("digite a faltas %d do aluno\n", i+1);
     scanf("%d", &alunos[i].faltas);
-    printf("digite a media %d do aluno", i+1);
+    printf("digite a media %d do aluno\n", i+1);
     scanf("%f", &alunos[i].media);
+    printf("\n");
     }
 
 }
@@ -53,6 +54,7 @@ void mostrandodados(Aluno *alunos, int quantidade){
             printf(" o nome do %d aluno é %s \n", i+1 ,alunos[i].nome);
             printf(" as faltas do %d aluno é %d \n",i+1, alunos[i].faltas);
             printf(" a media do %d aluno é %f \n", i+1, alunos[i].media);
+            printf("\n");
     }
     
 
@@ -62,7 +64,7 @@ int main(void){
 Aluno *alunos;
 int quantidade;
 int i;
-printf("digite a quantidade de alunos que vc deseja cadastrar");
+printf("digite a quantidade de alunos que vc deseja cadastrar\n");
 scanf("%d", &quantidade);
 
 alunos =(Aluno*) malloc(quantidade * sizeof(Aluno));

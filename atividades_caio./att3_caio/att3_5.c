@@ -15,7 +15,6 @@ void funcao(int *array, int *array2, int tam){
     array3[i] = array[i] + array2[i];
         
    }
-
    for ( i = 0; i < tam; i++)
    {
     printf("os valores somados da posição %d é : %d \n", i+1, array3[i]);
@@ -31,9 +30,10 @@ int main(void){
 printf("dgite os elementos que deseja \n");
 for (int i = 0; i < tam; i++)
 {
-    scanf("%d",&array[i]);
+    scanf("%d",&array[i]); 
 }
 
+    printf("segundo array \n");
 for (int i = 0; i < tam; i++)
 {
     scanf("%d",&array2[i]);

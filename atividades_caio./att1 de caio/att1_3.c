@@ -1,4 +1,3 @@
-
 /*Utilizando uma estrutura, faça um programa que permita a entrada de nome, endereço
 e telefone de 5 pessoas e os imprima em ordem alfabética.*/
 
@@ -12,7 +11,6 @@ typedef struct pessoas
     char nome[80];
     char endereco[200];
     int telefone;
-    char aux[80];
 }Pessoas[5];
 
 int main(void){
@@ -38,13 +36,13 @@ Pessoas pessoa;
     {
        for ( j = i+1; j < tam; j++)
        {
-        
-           compara = strcmp(pessoa[i].nome, pessoa[i+1].nome);
+         Pessoas aux;
+           compara = strcmp(pessoa[i].nome, pessoa[j].nome);
             if (compara > 0)
            {
-                strcpy(pessoa[i].aux, pessoa[i].nome);
-                strcpy(pessoa[i].nome, pessoa[i+1].nome);
-                strcpy(pessoa[i+1].nome, pessoa[i].aux);
+                aux[i] = pessoa[i];
+                pessoa[i] = pessoa[j];
+                pessoa[j] = aux[i];
         
            }
            

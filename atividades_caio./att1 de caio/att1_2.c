@@ -20,7 +20,7 @@ int idade;
 char nome[75];
 float notas[3];
 float media;
-}Aluno[3];
+}Aluno[5];
 
 
 
@@ -28,7 +28,7 @@ int main(void)
 {
  Aluno alunos;
     int i;
-    int tam = 3;
+    int tam = 5;
 
     for (i = 0; i < tam; i++){ 
     
@@ -105,34 +105,34 @@ char alunomaiormedia[70], alunomenormedia[70];
     
         for (int j = 0; j < 3; j++)
         {
-        printf("a nota da %i° prova do aluno é %2.f \n", j+1, alunos[i].notas[j]);
+        printf("a nota da %i° prova do aluno é %.2f \n", j+1, alunos[i].notas[j]);
         
         }
-    printf("a média do %i° aluno é %2.f \n", i+1, alunos[i].media);
+    printf("a média do %i° aluno é %.2f \n", i+1, alunos[i].media);
      printf("\n");   
     
         
      
     }
 
-    printf("o aluno com a maior primeira nota foi de %s com %2.f \n", alunomaiorm, maior);
+    printf("o aluno com a maior primeira nota foi de %s com %.2f \n", alunomaiorm, maior);
      printf("\n");
-    printf("o aluno com a menor primeira nota foi de %s com %2.f \n", alunomenorm, menor);
+    printf("o aluno com a menor primeira nota foi de %s com %.2f \n", alunomenorm, menor);
      printf("\n");
-    printf("o aluno com a maior média foi %s com %2.f \n", alunomaiormedia, maiormedia);
+    printf("o aluno com a maior média foi %s com %.2f \n", alunomaiormedia, maiormedia);
      printf("\n");
-    printf("o aluno com a menor média  foi %s com %2.f \n", alunomenormedia, menormedia);
+    printf("o aluno com a menor média  foi %s com %.2f \n", alunomenormedia, menormedia);
      printf("\n");
 
         for ( i = 0; i < tam; i++)
         {
             if (alunos[i].media > 5.9)
             {
-                printf("o aluno %s foi aprovado com média %3.f\n", alunos[i].nome, alunos[i].media);
+                printf("o aluno %s foi aprovado com média %.2f\n", alunos[i].nome, alunos[i].media);
                  printf("\n");
             }
             else{
-                   printf("o aluno %s foi reprovado com média %3.f\n", alunos[i].nome, alunos[i].media);
+                   printf("o aluno %s foi reprovado com média %.2f\n", alunos[i].nome, alunos[i].media);
                     printf("\n");
             }            
         }

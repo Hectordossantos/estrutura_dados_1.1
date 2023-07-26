@@ -36,7 +36,7 @@ int main(void) {
 
     printf("Digite os elementos que terá o 2° vetor:\n");
     v2 = (int*)malloc(n2 * sizeof(int));
-    for (i = 0; i < n2; i++) { // Fix the loop condition here
+    for (i = 0; i < n2; i++) { 
         scanf("%d", &v2[i]);
     }
 
@@ -47,7 +47,6 @@ int main(void) {
         printf("%d ", v3[i]);
     }
 
-    // Don't forget to free dynamically allocated memory
     free(v1);
     free(v2);
     free(v3);
