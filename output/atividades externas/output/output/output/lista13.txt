@@ -1,12 +1,13 @@
-Nome do 1° aluno: hector
-Nota 1 do 1° aluno: 345.00
-Nota 2 do 1° aluno: 6.00
-Média do 1° aluno: 175.50
-Nome do 2° aluno: lauro
-Nota 1 do 2° aluno: 432.00
-Nota 2 do 2° aluno: 34.00
-Média do 2° aluno: 233.00
-Nome do 3° aluno: jamilson
-Nota 1 do 3° aluno: 34.00
-Nota 2 do 3° aluno: 3.00
-Média do 3° aluno: 18.50
+aluno :hector 
+ nota1:8.00 
+ nota 2:8.000000 
+ media: 8.00 
+ aluno :murilo 
+ nota1:9.00 
+ nota 2:9.000000 
+ media: 9.00 
+ aluno :lucas 
+ nota1:10.00 
+ nota 2:10.000000 
+ media: 10.00 
+ 
