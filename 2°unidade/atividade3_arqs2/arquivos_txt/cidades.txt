@@ -1,0 +1,4 @@
+manaus  250000
+natal 300000
+mossoró 1400000
+locus 32000
