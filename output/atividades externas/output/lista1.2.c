@@ -6,11 +6,12 @@ int main(){
 char titulo[100];
 char nomes [300];
 
-arq= fopen("arquivotxt.txt","w");
-
-printf("digite o titulo");
+printf("digite o titulo do arquivo e no final adicione a extensão .txt\n");
 scanf(" %[^\n]s", titulo);
-printf("digite o nome");
+
+arq= fopen(titulo,"w");
+
+printf("digite o nome\n");
 scanf(" %[^\n]s", nomes);
 
 fprintf(arq, "titulo:%s \n nome: %s", titulo, nomes);

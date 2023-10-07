@@ -13,11 +13,11 @@ typedef struct alunos
 
 
 int main(void){
-
-Alunos alunos[3];
+int tam = 3;
+Alunos alunos[tam];
 
     FILE *arq;
-for (int i = 0; i < 3; i++)
+for (int i = 0; i < tam; i++)
 {
     printf("digite o nome do aluno %d aluno \n", i+1);
     scanf(" %[^\n]s",alunos[i].nome);
@@ -25,18 +25,19 @@ for (int i = 0; i < 3; i++)
     scanf("%f", &alunos[i].nota1);
     printf("digite a segunda nota do aluno %d aluno \n", i+1);
      scanf("%f", &alunos[i].nota2);
+
     alunos[i].media = (alunos[i].nota1 + alunos[i].nota2) / 2; 
 }
 
-    arq = fopen("lista13.txt", "w");
+    arq = fopen("lista133.txt", "w");
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < tam; i++)
     {
         fprintf(arq, "aluno :%s \n nota1:%.2f \n nota 2:%f \n media: %.2f \n ", alunos[i].nome, alunos[i].nota1, alunos[i].nota2, alunos[i].media);
     }
    
    fclose(arq);
-     arq = fopen("lista13.txt", "r");
+     arq = fopen("lista133.txt", "r");
     
     while (fscanf(arq, "%s %f %f %f", alunos->nome, alunos->nota1, alunos->nota2 ,alunos->media)!= EOF)
     {

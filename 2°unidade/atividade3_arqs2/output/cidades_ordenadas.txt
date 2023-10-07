@@ -1,0 +1,4 @@
+cidade: paris, habitantes: 1450000 
+cidade: natal, habitantes: 300000 
+cidade: manaus, habitantes: 250000 
+cidade: mossoró, habitantes: 140000 

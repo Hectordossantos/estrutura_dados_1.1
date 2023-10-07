@@ -19,14 +19,12 @@ int main(void){
 
     arq= fopen("lista14.txt", "r");
    
-
    while(fscanf(arq,"%s %d %d %d",nome, &dian, &mesn, &anon) != EOF)
    {
       idade = 2023 -anon;
-      printf("%s tem ou tera: %d anos: \n", nome, idade);
+      printf("%s tem ou tera %d anos \n", nome, idade);
    }
+
     fclose(arq);
 
-
-   
 }

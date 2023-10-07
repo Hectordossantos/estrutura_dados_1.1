@@ -1,0 +1,4 @@
+Cidade: , Habitantes: 0 
+Cidade: natal, Habitantes: 300000 
+Cidade: mossoró, Habitantes: 140000 
+Cidade: paris, Habitantes: 1450000 

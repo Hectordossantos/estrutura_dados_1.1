@@ -1,0 +1,13 @@
+aluno :hector 
+ nota1:5.00 
+ nota 2:6.000000 
+ media: 5.50 
+ aluno :murilo 
+ nota1:8.00 
+ nota 2:6.000000 
+ media: 7.00 
+ aluno :lucas 
+ nota1:4.00 
+ nota 2:6.000000 
+ media: 5.00 
+ 

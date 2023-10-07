@@ -1,0 +1,4 @@
+manaus  250000
+natal 300000
+mossoró 140000
+paris 1450000

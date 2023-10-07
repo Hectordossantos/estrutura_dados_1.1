@@ -8,10 +8,10 @@ typedef struct aluno {
     float media;
 } Aluno;
 
-int main() {
-    Aluno alunos[10];
+int main(){
+    int tam = 10;
+    Aluno alunos[tam];
     int i;
-    int tam = 5;
 
     for (i = 0; i < tam; i++) {
         printf("Digite o nome do aluno %d: \n", i + 1);
@@ -27,21 +27,16 @@ int main() {
     FILE *arq;
     arq = fopen("lista13.txt", "w");
 
-    if (arq == NULL) {
-        printf("Erro ao abrir o arquivo.\n");
-        return 1;
-    }
-
     for (i = 0; i < tam; i++) {
         fprintf(arq, "Nome do %d° aluno: %s\n", i + 1, alunos[i].nome);
         fprintf(arq, "Nota 1 do %d° aluno: %.2f\n", i + 1, alunos[i].nota1);
         fprintf(arq, "Nota 2 do %d° aluno: %.2f\n", i + 1, alunos[i].nota2);
         fprintf(arq, "Média do %d° aluno: %.2f\n", i + 1, alunos[i].media);
+        fprintf(arq,"\n");
     }
 
     fclose(arq);
 
-    // Abrindo o arquivo para leitura
     arq = fopen("lista13.txt", "r");
 
     if (arq == NULL) {
@@ -54,10 +49,9 @@ int main() {
     printf("Dados dos alunos:\n");
 
     while (fgets(linha, sizeof(linha), arq) != NULL) {
-        printf("%s", linha);
+        printf("%s \n", linha);
     }
 
     fclose(arq);
 
-    return 0;
 }

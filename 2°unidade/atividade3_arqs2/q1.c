@@ -1,60 +1,57 @@
-/*Faça um programa que receba o nome de um arquivo de entrada e outro de saída. O
-arquivo de entrada contem o nome de uma cidade (ocupando 40 caracteres) e o seu
-número de habitantes. O programa deverá ler o arquivo de entrada e gerar um arquivo
-de saída onde aparece o nome da cidade mais populosa seguida pelo seu número de
-habitantes*/
-
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-
-typedef struct cidaedes
+typedef struct cidade
 {
-    char cidade[50];
+    char nome[50];
     int habitantes;
-}Cidades;
+} Cidade;
 
-
-int main(void){
-printf("abriu");
-
-Cidades cidades[4];
-FILE *marq;
-
-
-marq = fopen("cidades.txt", "r");
-int i = 0;
-while (fscanf(marq, "%s %d", cidades[i].cidade, &cidades[i].habitantes)!= EOF)
+int main(void)
 {
-    printf("as cidades são %s e seus habitantes %d \n", cidades[i].cidade, cidades[i].habitantes);
-i++;
-}
+    Cidade cidades[4];
+    FILE *entrada, *saida;
 
-Cidades aux;
+    entrada = fopen("cidades.txt", "r");
+
     for (int i = 0; i < 4; i++)
-    { 
-        for (int j = i+1; j < 4; j++)
+    {
+        fscanf(entrada,"%s %d", cidades[i].nome, &cidades[i].habitantes);
+    }
+    
+    fclose(entrada);
+
+    for (int i = 0;  i < 4; i++)
+    {
+        for (int j= i + 1; j < 4; j++)
         {
+         Cidade aux;
             if (cidades[i].habitantes < cidades[j].habitantes)
             {
                 aux = cidades[i];
-                cidades[i]= cidades[j];
+                cidades[i] = cidades[j];
                 cidades[j] = aux;
-
             }
-            
         }
-        
-      
     }
-i = 0;
-    while (fprintf(marq, "%s %d", cidades[i].cidade, cidades[i].habitantes) != EOF)
+  
+    for (int i = 0; i < 4; i++)
     {
-       printf("%s %d", cidades[i].cidade, cidades[i].habitantes);
-       i++;
+        printf("cidade %s, habitantes %d \n", cidades[i].nome, cidades[i].habitantes);
+    }
+
+    saida = fopen("cidades_ordenadas.txt", "w");
+  
+    for (int i = 0; i < 4; i++)
+    {
+        fprintf(saida, "cidade: %s, habitantes: %d \n", cidades[i].nome, cidades[i].habitantes);
     }
     
-    
-fclose(marq);
+   
+
+    fclose(saida);
+
+    printf("Cidades ordenadas por quantidade de habitantes foram escritas em 'cidades_ordenadas.txt'.\n");
 
 }

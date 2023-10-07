@@ -42,5 +42,4 @@ fclose(b);
 fclose(c);
 
 
-  return 0;
 }
